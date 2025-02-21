@@ -99,6 +99,75 @@
           }
         }
       }
+    },
+    "cco": {
+      "projectType": "library",
+      "root": "projects/cco",
+      "sourceRoot": "projects/cco/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/cco/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cco/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/cco/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/cco/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "csc": {
+      "projectType": "library",
+      "root": "projects/csc",
+      "sourceRoot": "projects/csc/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/csc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/csc/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/csc/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/csc/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "9f706095-5440-45a5-ad81-f224a93ed443"
   }
 }
